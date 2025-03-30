@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Single joint model</title>
+    <style>
+        canvas {
+         
+            background-image: url('3.png'); /* Your image URL */
+            background-size: cover; /* Resize the image to cover the whole canvas */
+            background-position: center; /* Center the image */
+        }
+        #instruction {
+            display: flex;
+            justify-content: normal;
+            gap: 500px; /* Adds space between the two <p> elements */
+        }
+
+            #instruction p {
+                margin: 0; /* Removes default margin */
+            }
+    </style>
+</head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="1500" height="600">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <h4>&larr;&rarr;: whole hand rotation(y-axis)</h4>
+    <div id="instruction">
+       <div>
+           <h2>Preset Actions</h2>
+        <p>
+            
+            Z : one sign<br />
+            X : two sign<br />
+            V : three sign<br />
+            C : four sign<br />
+            N : five sign<br />
+            SPACE : Bonus (Try at your own risk💀)
+        </p>
+        </div>
+       <div>
+           <h2>Full Control Menu:</h2>
+           <p>
+               [1,q,2,w] : Pinky Finger<br />
+               [3,e,4,r] : Ring Finger<br />
+               [5,t,6,y] : Middle Finger<br />
+               [7,u,8,i] : Index Finger<br />
+               [9,o,0,p] : Thumb
+       </div>
+      
+    </div>
+
+        <script src="./lib/webgl-utils.js"></script>
+        <script src="./lib/webgl-debug.js"></script>
+        <script src="./lib/cuon-utils.js"></script>
+        <script src="./lib/cuon-matrix.js"></script>
+        <script src="./JointModel.js"></script>
+</body>
+</html>
